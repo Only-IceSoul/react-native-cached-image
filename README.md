@@ -2,16 +2,16 @@
 
 ## Getting started
 
-`$ npm install react-native-cached-image --save`
+`$ npm install react-native-cached-imageview --save`
 
-### Mostly automatic installation
+`$ react-native link react-native-cached-imageview`
 
-`$ react-native link react-native-cached-image`
+
 
 ## Usage
 ```javascript
-import ReactNativeCachedImage from 'react-native-cached-image';
+import {Controller , Image } from 'react-native-cached-imageview';
 
 // TODO: What to do with the module?
-ReactNativeCachedImage;
+
 ```

@@ -1,7 +1,7 @@
 {
-  "name": "react-native-cached-image",
+  "name": "react-native-cached-imageview",
   "title": "React Native Cached Image",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "TODO",
   "main": "index.js",
   "files": [
@@ -9,6 +9,8 @@
     "android",
     "index.js",
     "ios",
+    "src",
+    "index.d.ts",
     "react-native-cached-image.podspec"
   ],
   "scripts": {

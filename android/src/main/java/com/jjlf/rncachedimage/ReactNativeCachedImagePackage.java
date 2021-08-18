@@ -3,7 +3,6 @@
 package com.jjlf.rncachedimage;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 import com.facebook.react.ReactPackage;
@@ -14,11 +13,11 @@ import com.facebook.react.uimanager.ViewManager;
 public class ReactNativeCachedImagePackage implements ReactPackage {
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
-        return Arrays.<NativeModule>asList(new ReactNativeCachedImageModule(reactContext));
+        return Arrays.<NativeModule>asList(new CachedImageModule(reactContext));
     }
 
     @Override
     public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
-        return Collections.emptyList();
+        return Arrays.<ViewManager>asList(new CachedImageViewManager());
     }
 }

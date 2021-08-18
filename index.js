@@ -1,7 +1,7 @@
 // main index.js
 
-import { NativeModules } from 'react-native';
+import { requireNativeComponent } from 'react-native';
+import ImageModule from './src/ImageModule'
 
-const { ReactNativeCachedImage } = NativeModules;
-
-export default ReactNativeCachedImage;
+export const Image = requireNativeComponent('Image',null)
+export const Controller = ImageModule
