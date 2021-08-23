@@ -1,6 +1,6 @@
 import { findNodeHandle, NativeModules } from 'react-native';
 
-const Image = NativeModules.ImageModule
+const Image = NativeModules.Image
 
 export default ImageModule = {
     
