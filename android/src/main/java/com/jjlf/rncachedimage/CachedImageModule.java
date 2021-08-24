@@ -53,7 +53,7 @@ public class CachedImageModule extends ReactContextBaseJavaModule {
 
     @Override
     public String getName() {
-        return "ImageModule";
+        return "Image";
     }
 
     @ReactMethod

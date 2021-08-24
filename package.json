@@ -1,8 +1,8 @@
 {
   "name": "react-native-cached-imageview",
   "title": "React Native Cached Image",
-  "version": "0.0.3",
-  "description": "TODO",
+  "version": "1.0.0",
+  "description": "Cahed Image Android IOS",
   "main": "index.js",
   "files": [
     "README.md",
@@ -18,15 +18,26 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/github_account/react-native-cached-image.git",
-    "baseUrl": "https://github.com/github_account/react-native-cached-image"
+    "url": "git+https://github.com/Only-IceSoul/react-native-cached-image.git",
+    "baseUrl": "https://github.com/Only-IceSoul/react-native-cached-image"
   },
   "keywords": [
-    "react-native"
+    "react-native",
+    "cached",
+    "cache",
+    "image",
+    "LRUCache",
+    "imageview",
+    "android",
+    "ios",
+    "cached-image",
+    "fast",
+    "image",
+    "fast image"
   ],
   "author": {
-    "name": "Your Name",
-    "email": "yourname@email.com"
+    "name": "Juan J LF",
+    "email": "justinjlf21@gmail.com"
   },
   "license": "MIT",
   "licenseFilename": "LICENSE",
