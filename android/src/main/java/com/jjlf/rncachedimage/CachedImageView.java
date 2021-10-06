@@ -70,6 +70,13 @@ public class CachedImageView extends AppCompatImageView {
         });
     }
     
+    protected float mTranslationZ = 0f;
+    public void setTranslateZ(float v) {
+            if(mTranslationZ != v) {
+                    mTranslationZ = v;
+                    setTranslationZ(mTranslationZ);
+            }
+    }
 
     public void setSrc(ReadableMap data){
         if(data != null) {

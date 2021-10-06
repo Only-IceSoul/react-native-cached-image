@@ -21,6 +21,11 @@ public class CachedImageViewManager extends SimpleViewManager<CachedImageView> {
     static String EVENT_ON_LOAD_SUCCESS = "onLoadSuccess";
         
     
+    @ReactProp(name = "translateZ",defaultFloat = 0f)
+    public void setTranslateZ(CachedImageView view ,float v) {
+        view.setTranslateZ(v);
+    }
+
     @ReactProp(name = "source")
     public void source(CachedImageView view, ReadableMap data)  {
         view.setSrc(data);
