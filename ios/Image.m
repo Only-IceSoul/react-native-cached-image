@@ -16,6 +16,8 @@
 
 RCT_EXTERN_MODULE(Image,RCTViewManager)
 
+RCT_EXPORT_VIEW_PROPERTY(translateZ, NSNumber)
+
 RCT_EXPORT_VIEW_PROPERTY(source, NSDictionary)
 RCT_EXPORT_VIEW_PROPERTY(scaleType, NSString)
 

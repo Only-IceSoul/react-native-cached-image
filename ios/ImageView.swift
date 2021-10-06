@@ -31,6 +31,12 @@ class ImageView: UIImageView , ViewTarget {
     @objc var onLoadSuccess : RCTDirectEventBlock?
     @objc var onLoadEnd : RCTDirectEventBlock?
     
+    @objc func setTranslateZ(_ v:NSNumber?){
+        let ev = CGFloat(truncating: v ?? 0)
+        layer.zPosition = ev
+ 
+    }
+    
     @objc func setScaleType(_ scaleType:String){
         switch scaleType {
         case SCALE_TYPE_COVER:
