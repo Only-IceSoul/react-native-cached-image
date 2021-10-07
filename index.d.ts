@@ -50,6 +50,7 @@ interface ImageSource extends SourceBase{
 interface ImageProps extends ViewProps {
    source: ImageSource | null
    scaleType?:ScaleType;
+   translateZ?:number
    onLoadStart?:() => void | null;
    onLoadEnd?:() => void | null;
    onLoadError?:(event:EventImageError) => void | null;

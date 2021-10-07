@@ -62,12 +62,7 @@ public class CachedImageView extends AppCompatImageView {
     CachedImageView(Context context) {
         super(context);
         setClipToOutline(true);
-        setOutlineProvider( new ViewOutlineProvider(){
-            @Override
-            public void getOutline(View view, Outline outline) {
-                outline.setRoundRect(0,0,view.getWidth(),view.getHeight(),0f);
-            }
-        });
+     
     }
     
     protected float mTranslationZ = 0f;
