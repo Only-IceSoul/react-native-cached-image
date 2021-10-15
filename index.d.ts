@@ -62,7 +62,7 @@ interface ImageProps extends ViewProps {
 declare class ImageComponent extends React.Component<ImageProps> {}
 declare const ImageBase: Constructor<NativeMethods> & typeof ImageComponent;
 
-export class Image extends ImageBase {}
+export class CachedImage extends ImageBase {}
 
 
 export class Controller {

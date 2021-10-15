@@ -2,7 +2,7 @@ import { findNodeHandle, NativeModules } from 'react-native';
 
 const Image = NativeModules.Image
 
-export default ImageModule = {
+export default {
     
       clearMemoryCache:() => {
         return new Promise((resolve, reject) => {
