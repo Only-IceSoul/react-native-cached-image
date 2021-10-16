@@ -86,6 +86,6 @@ class CustomTarget: ViewTarget {
     }
     
     public func removeFromList(){
-        Image.CustomTargetList[mUri] = nil
+        JJSCachedImage.CustomTargetList[mUri] = nil
     }
 }
