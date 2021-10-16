@@ -1,7 +1,7 @@
 {
   "name": "react-native-cached-imageview",
   "title": "React Native Cached Image",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Cahed Image Android IOS",
   "main": "index.js",
   "files": [

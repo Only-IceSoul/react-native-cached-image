@@ -1,7 +1,5 @@
 package com.jjlf.rncachedimage;
 
-import android.widget.ImageView;
-
 import androidx.annotation.NonNull;
 
 import com.facebook.react.bridge.ReadableMap;
@@ -12,7 +10,7 @@ import com.facebook.react.uimanager.annotations.ReactProp;
 
 import java.util.Map;
 
-public class CachedImageViewManager extends SimpleViewManager<CachedImageView> {
+public class CachedImageManager extends SimpleViewManager<CachedImage> {
 
     
     static String EVENT_ON_LOAD_START = "onLoadStart";
@@ -24,22 +22,18 @@ public class CachedImageViewManager extends SimpleViewManager<CachedImageView> {
 
 
     @ReactProp(name = "translateZ",defaultFloat = 0f)
-    public void setTranslateZ(CachedImageView view ,float v) {
+    public void setTranslateZ(CachedImage view ,float v) {
         view.setTranslateZ(v);
     }
 
     @ReactProp(name = "source")
-    public void source(CachedImageView view, ReadableMap data)  {
+    public void source(CachedImage view, ReadableMap data)  {
         view.setSrc(data);
     }
 
     @ReactProp(name = "scaleType")
-    public void scaleType(CachedImageView view, String scaleType) {
-        if (scaleType.equals(CachedImageView.SCALE_TYPE_COVER)) {
-            view.setScaleType(ImageView.ScaleType.CENTER_CROP);
-        }else {
-            view.setScaleType(ImageView.ScaleType.FIT_CENTER);
-        }
+    public void scaleType(CachedImage view, String scaleType) {
+        view.setScaleType(scaleType);
     }
 
 
@@ -57,11 +51,11 @@ public class CachedImageViewManager extends SimpleViewManager<CachedImageView> {
 
     @Override
     public String getName() {
-        return "JJSCachedImage";
+        return "JJSDrawableImage";
     }
 
     @Override
-    protected CachedImageView createViewInstance(@NonNull ThemedReactContext reactContext) {
-        return new CachedImageView(reactContext);
+    protected CachedImage createViewInstance(@NonNull ThemedReactContext reactContext) {
+        return new CachedImage(reactContext);
     }
 }

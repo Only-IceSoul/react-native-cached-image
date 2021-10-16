@@ -1,7 +1,10 @@
 // main index.js
 
-import { requireNativeComponent } from 'react-native';
+import NativeImage from './src/NativeCachedImage'
+import NativeDrawableImage from './src/NativeDrawableImage'
 import ImageModule from './src/ImageModule'
+import { Platform } from 'react-native'
 
-export const CachedImage = requireNativeComponent('Image',null)
+export const CachedImage = NativeImage
+export const DrawableImage = Platform.OS === 'ios' ? NativeImage  : NativeDrawableImage
 export const Controller = ImageModule

@@ -147,13 +147,13 @@ public class CachedImageModule extends ReactContextBaseJavaModule {
     @ReactMethod
     public void requestImage(int tag,String format,float quality, Promise promise){
         try{
-            CachedImageView view = getImageView(tag);
+            View view = getImageView(tag);
             if (view != null) {
                 Bitmap.CompressFormat f = format.equals("png") ? Bitmap.CompressFormat.PNG : Bitmap.CompressFormat.JPEG;
                 int q = (int)(quality * 100f);
                 ByteArrayOutputStream bytes = new ByteArrayOutputStream();
-                Drawable d = view.getDrawable();
-                if(ModUtil.toBitmap(d).compress(f,q,bytes)){
+                Bitmap bmp = ((CachedInterface) view).getBitmap();
+                if(bmp.compress(f,q,bytes)){
                     promise.resolve(android.util.Base64.encodeToString(bytes.toByteArray(), android.util.Base64.DEFAULT));
                 }else{
                     throw new Error("failed to compress format "+ format);
@@ -168,12 +168,14 @@ public class CachedImageModule extends ReactContextBaseJavaModule {
     }
     @ReactMethod
     public void clear(int tag){
-        final CachedImageView v =  getImageView(tag);
-       if(v != null){
+       final View view = getImageView(tag);
+       if(view != null){
             new Handler(Looper.getMainLooper()).post(new Runnable() {
                 @Override
                 public void run() {
-                    Glide.with(reactContext).clear(v);
+                    if (view instanceof CachedInterface) {
+                        ((CachedInterface) view).clear();
+                    }
                 }
             });
         }
@@ -193,13 +195,9 @@ public class CachedImageModule extends ReactContextBaseJavaModule {
         });
     }
 
-    private CachedImageView getImageView(int tag) {
+    private View getImageView(int tag) {
         UIManagerModule uiManager = reactContext.getNativeModule(UIManagerModule.class);
-        View view = uiManager.resolveView(tag);
-        if (view.getClass() == CachedImageView.class) {
-            return (CachedImageView) view;
-        }
-        return null;
+        return uiManager.resolveView(tag);
     }
 
     private DiskCacheStrategy getDiskCacheStrategy(String strategy)  {

@@ -37,7 +37,7 @@ import java.lang.ref.WeakReference;
 import java.net.URL;
 import java.util.Objects;
 
-public class CachedImageView extends AppCompatImageView {
+public class CachedImageView extends AppCompatImageView implements CachedInterface{
 
 
        
@@ -73,6 +73,16 @@ public class CachedImageView extends AppCompatImageView {
             }
     }
 
+        @Override
+        public Bitmap getBitmap() {
+            return ModUtil.toBitmap(getDrawable());
+        }
+
+        @Override
+    public void clear(){
+            Glide.with(getContext()).clear(this);
+    }
+
     public void setSrc(ReadableMap data){
         if(data != null) {
                 int w = ModUtil.getInt(data,"width",-1);
@@ -88,6 +98,8 @@ public class CachedImageView extends AppCompatImageView {
                 Priority priority = Objects.equals(prior, PRIORITY_LOW) ? Priority.LOW : (Objects.equals(prior, PRIORITY_HIGH) ? Priority.HIGH : Priority.NORMAL);
                 boolean resize = w > 0 && h > 0;
                 updateImage(uri,placeholder, skipMemoryCache,diskCacheStrategy, headers, priority,asGif,resize,w, h,mode);
+        }else{
+                clear();
         }
     }
 

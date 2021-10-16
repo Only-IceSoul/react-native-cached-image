@@ -63,14 +63,14 @@ declare class ImageComponent extends React.Component<ImageProps> {}
 declare const ImageBase: Constructor<NativeMethods> & typeof ImageComponent;
 
 export class CachedImage extends ImageBase {}
-
+export class DrawableImage extends ImageBase {}
 
 export class Controller {
 
 
     static clearMemoryCache():Promise<boolean>
-    static requestImage(ref:Image | undefined | null,format?:CompressFormat,quality?:number): Promise<string>
-    static clear(ref: Image | undefined | null): void
+    static requestImage(ref:CachedImage | DrawableImage | undefined | null,format?:CompressFormat,quality?:number): Promise<string>
+    static clear(ref: CachedImage | DrawableImage | undefined | null): void
     static get(data: SourceBase, cb:(result:ImageCallBack)=> void): void
 
 }

@@ -18,6 +18,8 @@ public class ReactNativeCachedImagePackage implements ReactPackage {
 
     @Override
     public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
-        return Arrays.<ViewManager>asList(new CachedImageViewManager());
+        return Arrays.<ViewManager>asList(
+                new CachedImageManager(),
+                new CachedImageViewManager());
     }
 }
