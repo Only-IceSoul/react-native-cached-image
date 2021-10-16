@@ -43,7 +43,7 @@ add a .swift file
 ```javascript
   import { Controller, CachedImage ,DrawableImage } from 'react-native-cached-imageview'
 
-  //(Android) DrawableImage not support Gif 
+  //(Android) DrawableImage not support Gif - useful for shared elements.
   
   const source = {
       uri: 'https://unsplash.it/200/200?image=1',

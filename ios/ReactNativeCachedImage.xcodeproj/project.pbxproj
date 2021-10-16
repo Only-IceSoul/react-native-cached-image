@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D0F6630026D441F000F6C221 /* newfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F662FF26D441EF00F6C221 /* newfile.swift */; };
-		D0F6630626D4421A00F6C221 /* Image.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F6630226D4421900F6C221 /* Image.m */; };
-		D0F6630726D4421A00F6C221 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6630326D4421900F6C221 /* Image.swift */; };
+		D0DE1427271B8B2800A7E7B3 /* JJSCachedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DE1425271B8B2800A7E7B3 /* JJSCachedImage.swift */; };
+		D0DE1428271B8B2800A7E7B3 /* JJSCachedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DE1426271B8B2800A7E7B3 /* JJSCachedImage.m */; };
 		D0F6630826D4421A00F6C221 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6630426D4421A00F6C221 /* ImageView.swift */; };
 		D0F6630926D4421A00F6C221 /* CustomTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6630526D4421A00F6C221 /* CustomTarget.swift */; };
 /* End PBXBuildFile section */
@@ -28,10 +27,9 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libReactNativeCachedImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libReactNativeCachedImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0DE1425271B8B2800A7E7B3 /* JJSCachedImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJSCachedImage.swift; sourceTree = "<group>"; };
+		D0DE1426271B8B2800A7E7B3 /* JJSCachedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJSCachedImage.m; sourceTree = "<group>"; };
 		D0F662FE26D441EF00F6C221 /* ReactNativeCachedImage-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ReactNativeCachedImage-Bridging-Header.h"; sourceTree = "<group>"; };
-		D0F662FF26D441EF00F6C221 /* newfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newfile.swift; sourceTree = "<group>"; };
-		D0F6630226D4421900F6C221 /* Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Image.m; sourceTree = "<group>"; };
-		D0F6630326D4421900F6C221 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		D0F6630426D4421A00F6C221 /* ImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		D0F6630526D4421A00F6C221 /* CustomTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTarget.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -59,10 +57,9 @@
 			isa = PBXGroup;
 			children = (
 				D0F6630526D4421A00F6C221 /* CustomTarget.swift */,
-				D0F6630226D4421900F6C221 /* Image.m */,
-				D0F6630326D4421900F6C221 /* Image.swift */,
+				D0DE1426271B8B2800A7E7B3 /* JJSCachedImage.m */,
+				D0DE1425271B8B2800A7E7B3 /* JJSCachedImage.swift */,
 				D0F6630426D4421A00F6C221 /* ImageView.swift */,
-				D0F662FF26D441EF00F6C221 /* newfile.swift */,
 				134814211AA4EA7D00B7C361 /* Products */,
 				D0F662FE26D441EF00F6C221 /* ReactNativeCachedImage-Bridging-Header.h */,
 			);
@@ -126,11 +123,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0DE1427271B8B2800A7E7B3 /* JJSCachedImage.swift in Sources */,
+				D0DE1428271B8B2800A7E7B3 /* JJSCachedImage.m in Sources */,
 				D0F6630926D4421A00F6C221 /* CustomTarget.swift in Sources */,
 				D0F6630826D4421A00F6C221 /* ImageView.swift in Sources */,
-				D0F6630026D441F000F6C221 /* newfile.swift in Sources */,
-				D0F6630726D4421A00F6C221 /* Image.swift in Sources */,
-				D0F6630626D4421A00F6C221 /* Image.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
